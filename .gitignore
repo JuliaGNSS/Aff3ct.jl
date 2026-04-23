@@ -1,0 +1,18 @@
+# Julia
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+Manifest.toml
+
+# Docs
+docs/build/
+docs/site/
+docs/Manifest.toml
+
+# Editor
+.vscode/
+.idea/
+
+# Scratch
+claude_scratch/

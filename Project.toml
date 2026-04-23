@@ -1,0 +1,21 @@
+name = "AFF3CT"
+uuid = "529ff742-b572-47ff-bc84-d3f557f53d2b"
+version = "0.1.0"
+authors = ["Soeren Schoenbrod <soeren.schoenbrod@juliahub.com>"]
+
+[deps]
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+aff3ct_jll = "85a5c246-4cb7-59af-af7a-717aeae34f9c"
+libaff3ct_jl_jll = "0fe9e899-d91b-5651-89f3-7fd58be8f575"
+
+[compat]
+Random = "1.10"
+aff3ct_jll = "4.2"
+libaff3ct_jl_jll = "0.1"
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
