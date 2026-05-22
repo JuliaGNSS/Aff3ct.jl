@@ -5,8 +5,6 @@
 ```@docs
 RSCEncoder
 ViterbiDecoder
-encode(::RSCEncoder, ::AbstractVector{Int32})
-decode(::ViterbiDecoder, ::AbstractVector{Float32})
 ```
 
 ## Verification against upstream references

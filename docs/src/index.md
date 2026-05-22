@@ -37,6 +37,21 @@ V_K = decode(dec, llrs)
 Each code family page includes Monte Carlo BER simulations compared against
 upstream aff3ct reference curves from `aff3ct/refs/`.
 
+## Common API
+
+All encoders share a single [`encode`](@ref) / [`encode!`](@ref) entry point
+that dispatches on the concrete subtype of [`AbstractEncoder`](@ref);
+likewise [`decode`](@ref) / [`decode!`](@ref) on [`AbstractDecoder`](@ref).
+
+```@docs
+AbstractEncoder
+AbstractDecoder
+encode
+encode!
+decode
+decode!
+```
+
 ## Internal Modules
 
 ```@docs

@@ -5,8 +5,6 @@
 ```@docs
 TurboEncoder
 TurboDecoder
-encode(::TurboEncoder, ::AbstractVector{Int32})
-decode(::TurboDecoder, ::AbstractVector{Float32})
 ```
 
 ## Verification against upstream references

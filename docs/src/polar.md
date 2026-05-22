@@ -8,9 +8,6 @@ generate_frozen_bits_5g
 PolarEncoder
 PolarSCDecoder
 PolarSCLDecoder
-encode(::PolarEncoder, ::AbstractVector{Int32})
-decode(::PolarSCDecoder, ::AbstractVector{Float32})
-decode(::PolarSCLDecoder, ::AbstractVector{Float32})
 ```
 
 ## Verification against upstream references

@@ -6,8 +6,6 @@
 LDPCMatrix
 LDPCEncoder
 LDPCBPDecoder
-encode(::LDPCEncoder, ::AbstractVector{Int32})
-decode(::LDPCBPDecoder, ::AbstractVector{Float32})
 ```
 
 ## Verification against upstream references

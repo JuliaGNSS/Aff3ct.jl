@@ -14,8 +14,6 @@ function of the polynomial taps.
 ```@docs
 ConvEncoder
 ConvViterbiDecoder
-encode(::ConvEncoder, ::AbstractVector{Int32})
-decode(::ConvViterbiDecoder, ::AbstractVector{Float32})
 ```
 
 ## Verification against upstream references
