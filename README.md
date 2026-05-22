@@ -1,7 +1,7 @@
-# AFF3CT.jl
+# Aff3ct.jl
 
-[![Build Status](https://github.com/JuliaGNSS/AFF3CT.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/JuliaGNSS/AFF3CT.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaGNSS.github.io/AFF3CT.jl/dev)
+[![Build Status](https://github.com/JuliaGNSS/Aff3ct.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/JuliaGNSS/Aff3ct.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaGNSS.github.io/Aff3ct.jl/dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Julia bindings for [AFF3CT](https://aff3ct.github.io/), a fast forward-error-correction toolbox. Wraps the C++ implementations of Polar, LDPC, Turbo, RSC, and feedforward convolutional codes behind a Julia-native API.
@@ -46,7 +46,7 @@ In-place variants `encode!` / `decode!` avoid per-call allocation and are recomm
 | RSC                     | `RSCEncoder`            | `ViterbiDecoder`                            |
 | Feedforward conv        | `ConvEncoder`           | `ConvViterbiDecoder`                        |
 
-See the [documentation](https://JuliaGNSS.github.io/AFF3CT.jl/dev) for BER curves and per-codec parameter details.
+See the [documentation](https://JuliaGNSS.github.io/Aff3ct.jl/dev) for BER curves and per-codec parameter details.
 
 ## License
 

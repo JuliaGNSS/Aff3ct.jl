@@ -71,7 +71,7 @@ ax = Axis(fig[1, 1];
     xlabel="Eb/N0 (dB)", ylabel="BER",
     yscale=log10, title="Turbo (K=6144, 6 ite, LTE)")
 scatterlines!(ax, ebn0s, ref_bers; label="Reference (aff3ct)", marker=:circle)
-scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:rect)
+scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:rect)
 axislegend(ax)
 fig
 ```

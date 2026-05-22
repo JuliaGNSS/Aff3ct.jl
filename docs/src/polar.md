@@ -72,7 +72,7 @@ ax = Axis(fig[1, 1];
     xlabel="Eb/N0 (dB)", ylabel="BER",
     yscale=log10, title="Polar SC (N=128, K=96)")
 scatterlines!(ax, ebn0s, ref_bers; label="Reference (aff3ct)", marker=:circle)
-scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:rect)
+scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:rect)
 axislegend(ax)
 fig
 ```
@@ -134,7 +134,7 @@ ax = Axis(fig[1, 1];
     xlabel="Eb/N0 (dB)", ylabel="BER",
     yscale=log10, title="Polar SCL (N=2048, K=1723, L=32)")
 scatterlines!(ax, ebn0s, ref_bers; label="Reference (aff3ct)", marker=:circle)
-scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:rect)
+scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:rect)
 axislegend(ax)
 fig
 ```

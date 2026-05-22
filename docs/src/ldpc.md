@@ -82,7 +82,7 @@ if isfile(matrix_file)
         xlabel="Eb/N0 (dB)", ylabel="BER",
         yscale=log10, title="LDPC (N=2048, K=1723) SPA flooding 100 ite")
     scatterlines!(ax, ebn0s, ref_bers; label="Reference (aff3ct)", marker=:circle)
-    scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:rect)
+    scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:rect)
     axislegend(ax)
     fig
 else

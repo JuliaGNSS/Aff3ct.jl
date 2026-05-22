@@ -1,6 +1,6 @@
 using Test
 
-@testset verbose=true "AFF3CT.jl" begin
+@testset verbose=true "Aff3ct.jl" begin
     include("test_polar.jl")
     include("test_turbo.jl")
     include("test_ldpc.jl")

@@ -1,6 +1,6 @@
 # Comparison
 
-BER waterfall comparison of all code families supported by AFF3CT.jl.
+BER waterfall comparison of all code families supported by Aff3ct.jl.
 All codes use short block lengths and standard configurations for a fast docs build.
 
 | Code | K | N | Rate | Key params |

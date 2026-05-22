@@ -60,7 +60,7 @@ fig = Figure()
 ax = Axis(fig[1, 1];
     xlabel="Eb/N0 (dB)", ylabel="BER",
     yscale=log10, title="RSC + Viterbi (K=128, rate ≈ 1/2)")
-scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:circle)
+scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:circle)
 axislegend(ax)
 fig
 ```

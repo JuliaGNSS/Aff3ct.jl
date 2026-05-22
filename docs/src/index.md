@@ -1,4 +1,4 @@
-# AFF3CT.jl
+# Aff3ct.jl
 
 Julia bindings for the [AFF3CT](https://aff3ct.github.io/) Forward Error Correction (FEC) library.
 

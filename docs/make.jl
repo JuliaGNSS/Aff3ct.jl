@@ -3,7 +3,7 @@ using Aff3ct
 
 makedocs(;
     modules=[Aff3ct],
-    sitename="AFF3CT.jl",
+    sitename="Aff3ct.jl",
     authors="Soeren Schoenbrod and contributors",
     pages=[
         "Home" => "index.md",
@@ -17,7 +17,7 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/JuliaGNSS/AFF3CT.jl",
+    repo="github.com/JuliaGNSS/Aff3ct.jl",
     devbranch="main",
     push_preview=true,
 )

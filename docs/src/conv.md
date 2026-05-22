@@ -70,7 +70,7 @@ fig = Figure()
 ax = Axis(fig[1, 1];
     xlabel="Eb/N0 (dB)", ylabel="BER",
     yscale=log10, title="Feedforward Conv + Viterbi (Galileo E1B, K=64)")
-scatterlines!(ax, ebn0s, ber_values; label="AFF3CT.jl", marker=:circle)
+scatterlines!(ax, ebn0s, ber_values; label="Aff3ct.jl", marker=:circle)
 axislegend(ax)
 fig
 ```
