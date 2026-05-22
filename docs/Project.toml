@@ -3,7 +3,6 @@ AFF3CT = "529ff742-b572-47ff-bc84-d3f557f53d2b"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 aff3ct_jll = "85a5c246-4cb7-59af-af7a-717aeae34f9c"
-libaff3ct_jl_jll = "0fe9e899-d91b-5651-89f3-7fd58be8f575"
 
 [compat]
 CairoMakie = "0.12, 0.13"

@@ -7,6 +7,8 @@ Julia bindings for the [AFF3CT](https://aff3ct.github.io/) Forward Error Correct
 - **Polar codes** — Encoder, Successive Cancellation (SC) decoder, SC List (SCL) decoder, frozen-bit generation via Gaussian Approximation (GA) or 5G-NR standard tables
 - **Turbo codes** — Encoder/decoder with LTE interleaver and BCJR (Bahl-Cocke-Jelinek-Raviv) Soft-Input Soft-Output (SISO) component decoders
 - **LDPC codes** — Low-Density Parity-Check encoder and Belief Propagation (BP) decoder using Sum-Product Algorithm (SPA) flooding
+- **RSC + Viterbi** — Recursive Systematic Convolutional encoder with Viterbi (SIHO) decoder
+- **Feedforward convolutional + Viterbi** — Non-systematic convolutional encoder (e.g. Galileo E1B) with Viterbi (SIHO) decoder
 
 ## Quick Example
 

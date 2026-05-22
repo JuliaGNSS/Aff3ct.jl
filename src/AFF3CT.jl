@@ -8,6 +8,7 @@ include("polar.jl")
 include("ldpc.jl")
 include("turbo.jl")
 include("rsc.jl")
+include("conv.jl")
 
 # Abstract types
 export AbstractEncoder, AbstractDecoder
@@ -24,6 +25,9 @@ export TurboEncoder, TurboDecoder
 
 # RSC / Viterbi
 export RSCEncoder, ViterbiDecoder
+
+# Feedforward convolutional / Viterbi
+export ConvEncoder, ConvViterbiDecoder
 
 # Common
 export encode, decode, encode!, decode!

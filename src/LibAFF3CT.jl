@@ -10,7 +10,7 @@ module LibAFF3CT
 if get(ENV, "AFF3CT_JL_LOCAL_LIB", "") != ""
     const libaff3ct_jl = ENV["AFF3CT_JL_LOCAL_LIB"]
 else
-    using libaff3ct_jl_jll: libaff3ct_jl
+    using aff3ct_jll: libaff3ct_jl
 end
 
 # ── Version / error ──────────────────────────────────────────────────
@@ -232,6 +232,46 @@ end
 
 function viterbi_decoder_destroy(dec::Ptr{Cvoid})
     ccall((:aff3ct_viterbi_decoder_destroy, libaff3ct_jl), Cvoid, (Ptr{Cvoid},), dec)
+end
+
+# ── Feedforward convolutional encoder ────────────────────────────────
+
+function conv_encoder_create(K::Integer, N::Integer, poly::Vector{Cint})
+    h = ccall((:aff3ct_conv_encoder_create, libaff3ct_jl),
+              Ptr{Cvoid}, (Cint, Cint, Ptr{Cint}, Cint),
+              K, N, poly, length(poly))
+    return check_handle(h, "feedforward conv encoder")
+end
+
+function conv_encode!(enc::Ptr{Cvoid}, U_K::Vector{Cint}, X_N::Vector{Cint})
+    ret = ccall((:aff3ct_conv_encode, libaff3ct_jl),
+                Cint, (Ptr{Cvoid}, Ptr{Cint}, Ptr{Cint}), enc, U_K, X_N)
+    ret != 0 && check_error()
+    return X_N
+end
+
+function conv_encoder_destroy(enc::Ptr{Cvoid})
+    ccall((:aff3ct_conv_encoder_destroy, libaff3ct_jl), Cvoid, (Ptr{Cvoid},), enc)
+end
+
+# ── Feedforward convolutional Viterbi decoder ────────────────────────
+
+function conv_viterbi_decoder_create(K::Integer, N::Integer, poly::Vector{Cint})
+    h = ccall((:aff3ct_conv_viterbi_decoder_create, libaff3ct_jl),
+              Ptr{Cvoid}, (Cint, Cint, Ptr{Cint}, Cint),
+              K, N, poly, length(poly))
+    return check_handle(h, "feedforward conv Viterbi decoder")
+end
+
+function conv_viterbi_decode!(dec::Ptr{Cvoid}, Y_N::Vector{Cfloat}, V_K::Vector{Cint})
+    ret = ccall((:aff3ct_conv_viterbi_decode, libaff3ct_jl),
+                Cint, (Ptr{Cvoid}, Ptr{Cfloat}, Ptr{Cint}), dec, Y_N, V_K)
+    ret < 0 && check_error()
+    return V_K
+end
+
+function conv_viterbi_decoder_destroy(dec::Ptr{Cvoid})
+    ccall((:aff3ct_conv_viterbi_decoder_destroy, libaff3ct_jl), Cvoid, (Ptr{Cvoid},), dec)
 end
 
 # ── Turbo encoder ────────────────────────────────────────────────────

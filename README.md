@@ -4,7 +4,7 @@
 [![Docs](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaGNSS.github.io/AFF3CT.jl/dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Julia bindings for [AFF3CT](https://aff3ct.github.io/), a fast forward-error-correction toolbox. Wraps the C++ implementations of Polar, LDPC, Turbo, and RSC codes behind a Julia-native API.
+Julia bindings for [AFF3CT](https://aff3ct.github.io/), a fast forward-error-correction toolbox. Wraps the C++ implementations of Polar, LDPC, Turbo, RSC, and feedforward convolutional codes behind a Julia-native API.
 
 ## Installation
 
@@ -13,7 +13,7 @@ using Pkg
 Pkg.add("AFF3CT")
 ```
 
-Binaries are provided via `aff3ct_jll` and `libaff3ct_jl_jll` — no separate C/C++ build is required.
+Binaries are provided via `aff3ct_jll` — no separate C/C++ build is required.
 
 ## Quick example
 
@@ -38,12 +38,13 @@ In-place variants `encode!` / `decode!` avoid per-call allocation and are recomm
 
 ## Supported codes
 
-| Family | Encoders                | Decoders                                    |
-|--------|-------------------------|---------------------------------------------|
-| Polar  | `PolarEncoder`          | `PolarSCDecoder`, `PolarSCLDecoder`         |
-| LDPC   | `LDPCEncoder`           | `LDPCBPDecoder`                             |
-| Turbo  | `TurboEncoder`          | `TurboDecoder`                              |
-| RSC    | `RSCEncoder`            | `ViterbiDecoder`                            |
+| Family                  | Encoders                | Decoders                                    |
+|-------------------------|-------------------------|---------------------------------------------|
+| Polar                   | `PolarEncoder`          | `PolarSCDecoder`, `PolarSCLDecoder`         |
+| LDPC                    | `LDPCEncoder`           | `LDPCBPDecoder`                             |
+| Turbo                   | `TurboEncoder`          | `TurboDecoder`                              |
+| RSC                     | `RSCEncoder`            | `ViterbiDecoder`                            |
+| Feedforward conv        | `ConvEncoder`           | `ConvViterbiDecoder`                        |
 
 See the [documentation](https://JuliaGNSS.github.io/AFF3CT.jl/dev) for BER curves and per-codec parameter details.
 

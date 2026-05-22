@@ -11,6 +11,7 @@ makedocs(;
         "Turbo Codes" => "turbo.md",
         "LDPC Codes" => "ldpc.md",
         "Convolutional Codes (RSC)" => "rsc.md",
+        "Convolutional Codes (Feedforward)" => "conv.md",
         "Comparison" => "comparison.md",
     ],
 )
