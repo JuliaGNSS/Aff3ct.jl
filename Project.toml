@@ -1,6 +1,6 @@
 name = "AFF3CT"
 uuid = "529ff742-b572-47ff-bc84-d3f557f53d2b"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Soeren Schoenbrod <soeren.schoenbrod@juliahub.com>"]
 
 [deps]
