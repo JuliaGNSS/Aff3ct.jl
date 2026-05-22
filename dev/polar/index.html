@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Polar Codes · Aff3ct.jl</title><meta name="title" content="Polar Codes · Aff3ct.jl"/><meta property="og:title" content="Polar Codes · Aff3ct.jl"/><meta property="twitter:title" content="Polar Codes · Aff3ct.jl"/><meta name="description" content="Documentation for Aff3ct.jl."/><meta property="og:description" content="Documentation for Aff3ct.jl."/><meta property="twitter:description" content="Documentation for Aff3ct.jl."/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">Aff3ct.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li class="is-active"><a class="tocitem" href>Polar Codes</a><ul class="internal"><li><a class="tocitem" href="#API-Reference"><span>API Reference</span></a></li><li><a class="tocitem" href="#Verification-against-upstream-references"><span>Verification against upstream references</span></a></li></ul></li><li><a class="tocitem" href="../turbo/">Turbo Codes</a></li><li><a class="tocitem" href="../ldpc/">LDPC Codes</a></li><li><a class="tocitem" href="../rsc/">Convolutional Codes (RSC)</a></li><li><a class="tocitem" href="../conv/">Convolutional Codes (Feedforward)</a></li><li><a class="tocitem" href="../comparison/">Comparison</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Polar Codes</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Polar Codes</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/JuliaGNSS/Aff3ct.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/main/docs/src/polar.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Polar-Codes"><a class="docs-heading-anchor" href="#Polar-Codes">Polar Codes</a><a id="Polar-Codes-1"></a><a class="docs-heading-anchor-permalink" href="#Polar-Codes" title="Permalink"></a></h1><h2 id="API-Reference"><a class="docs-heading-anchor" href="#API-Reference">API Reference</a><a id="API-Reference-1"></a><a class="docs-heading-anchor-permalink" href="#API-Reference" title="Permalink"></a></h2><article><details class="docstring" open="true"><summary id="Aff3ct.generate_frozen_bits_ga"><a class="docstring-binding" href="#Aff3ct.generate_frozen_bits_ga"><code>Aff3ct.generate_frozen_bits_ga</code></a> — <span class="docstring-category">Function</span></summary><section><div><pre><code class="language-julia hljs">generate_frozen_bits_ga(K, N; design_snr=0.0) -&gt; Vector{Bool}</code></pre><p>Generate frozen bit positions using Gaussian Approximation (GA). Returns a <code>Vector{Bool}</code> of length <code>N</code> where <code>true</code> = frozen, <code>false</code> = info.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/c2995d24c5ed22e54efa16a524e16435f3f51ad5/src/polar.jl#L3-L8">source</a></section></details></article><article><details class="docstring" open="true"><summary id="Aff3ct.generate_frozen_bits_5g"><a class="docstring-binding" href="#Aff3ct.generate_frozen_bits_5g"><code>Aff3ct.generate_frozen_bits_5g</code></a> — <span class="docstring-category">Function</span></summary><section><div><pre><code class="language-julia hljs">generate_frozen_bits_5g(K, N) -&gt; Vector{Bool}</code></pre><p>Generate frozen bit positions using the 5G-NR standard tables (N ≤ 1024).</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/c2995d24c5ed22e54efa16a524e16435f3f51ad5/src/polar.jl#L20-L24">source</a></section></details></article><article><details class="docstring" open="true"><summary id="Aff3ct.PolarEncoder"><a class="docstring-binding" href="#Aff3ct.PolarEncoder"><code>Aff3ct.PolarEncoder</code></a> — <span class="docstring-category">Type</span></summary><section><div><pre><code class="language-julia hljs">PolarEncoder(K, N, frozen_bits::AbstractVector{Bool})</code></pre><p>Systematic polar encoder for codeword length <code>N</code> and <code>K</code> information bits. <code>frozen_bits</code> is a <code>Vector{Bool}</code> of length <code>N</code> (true = frozen).</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/c2995d24c5ed22e54efa16a524e16435f3f51ad5/src/polar.jl#L38-L43">source</a></section></details></article><article><details class="docstring" open="true"><summary id="Aff3ct.PolarSCDecoder"><a class="docstring-binding" href="#Aff3ct.PolarSCDecoder"><code>Aff3ct.PolarSCDecoder</code></a> — <span class="docstring-category">Type</span></summary><section><div><pre><code class="language-julia hljs">PolarSCDecoder(K, N, frozen_bits::AbstractVector{Bool})</code></pre><p>Successive Cancellation (SC) decoder for polar codes.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/c2995d24c5ed22e54efa16a524e16435f3f51ad5/src/polar.jl#L60-L64">source</a></section></details></article><article><details class="docstring" open="true"><summary id="Aff3ct.PolarSCLDecoder"><a class="docstring-binding" href="#Aff3ct.PolarSCLDecoder"><code>Aff3ct.PolarSCLDecoder</code></a> — <span class="docstring-category">Type</span></summary><section><div><pre><code class="language-julia hljs">PolarSCLDecoder(K, N, L, frozen_bits::AbstractVector{Bool})</code></pre><p>Successive Cancellation List (SCL) decoder with list size <code>L</code>.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaGNSS/Aff3ct.jl/blob/c2995d24c5ed22e54efa16a524e16435f3f51ad5/src/polar.jl#L81-L85">source</a></section></details></article><h2 id="Verification-against-upstream-references"><a class="docs-heading-anchor" href="#Verification-against-upstream-references">Verification against upstream references</a><a id="Verification-against-upstream-references-1"></a><a class="docs-heading-anchor-permalink" href="#Verification-against-upstream-references" title="Permalink"></a></h2><h3 id="Polar-SC-(N128,-K96)"><a class="docs-heading-anchor" href="#Polar-SC-(N128,-K96)">Polar SC (N=128, K=96)</a><a id="Polar-SC-(N128,-K96)-1"></a><a class="docs-heading-anchor-permalink" href="#Polar-SC-(N128,-K96)" title="Permalink"></a></h3><p>Reference: <code>aff3ct/refs/POLAR/AWGN/BPSK/SC/Polar_N128_K96_SC_SYS_p32.txt</code></p><p>Configuration: systematic polar encoder, Gaussian Approximation (GA) frozen bits with adaptive sigma, Successive Cancellation (SC) decoder, BPSK modulation over Additive White Gaussian Noise (AWGN) channel.</p><table><tr><th style="text-align: right">Eb/N0 (dB)</th><th style="text-align: right">Reference BER</th><th style="text-align: right">Reference frames</th></tr><tr><td style="text-align: right">2.0</td><td style="text-align: right">3.86e-2</td><td style="text-align: right">1 109</td></tr><tr><td style="text-align: right">3.0</td><td style="text-align: right">8.39e-3</td><td style="text-align: right">3 786</td></tr><tr><td style="text-align: right">4.0</td><td style="text-align: right">1.19e-3</td><td style="text-align: right">26 464</td></tr></table><pre><code class="language-julia hljs">using Aff3ct, Random
+
+ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
+
+function run_polar_sc(K, N, ebn0_db, n_frames; seed=42)
+    R = K / N
+    sigma = ebn0_to_sigma(ebn0_db, R)
+    fb = generate_frozen_bits_ga(K, N; design_snr=ebn0_db)
+    enc = PolarEncoder(K, N, fb)
+    dec = PolarSCDecoder(K, N, fb)
+    rng = Random.default_rng(); Random.seed!(rng, seed)
+    total_be = 0
+    for _ in 1:n_frames
+        U_K = Int32.(rand(rng, Bool, K))
+        X_N = encode(enc, U_K)
+        bpsk = Float32[1f0 - 2f0 * x for x in X_N]
+        Y_N = Float32[b + sigma * randn(rng, Float32) for b in bpsk]
+        llrs = Float32[2f0 * y / sigma^2 for y in Y_N]
+        V_K = decode(dec, llrs)
+        total_be += count(U_K .!= V_K)
+    end
+    return total_be / (n_frames * K)
+end
+
+ebn0s = [2.0, 3.0, 4.0]
+ref_bers = [3.86e-2, 8.39e-3, 1.19e-3]
+n_frames = [1109, 3786, 5000]
+
+ber_values = Float64[]
+println(&quot;Polar SC (N=128, K=96) verification:&quot;)
+for (ebn0, ref_ber, nf) in zip(ebn0s, ref_bers, n_frames)
+    ber = run_polar_sc(96, 128, ebn0, nf)
+    push!(ber_values, ber)
+    ratio = ber &gt; 0 ? ref_ber / ber : Inf
+    println(&quot;  Eb/N0=$(ebn0)dB: BER=$(round(ber, sigdigits=3))  ref=$(ref_ber)  ratio=$(round(ratio, digits=2))x&quot;)
+end
+
+using CairoMakie
+
+fig = Figure()
+ax = Axis(fig[1, 1];
+    xlabel=&quot;Eb/N0 (dB)&quot;, ylabel=&quot;BER&quot;,
+    yscale=log10, title=&quot;Polar SC (N=128, K=96)&quot;)
+scatterlines!(ax, ebn0s, ref_bers; label=&quot;Reference (aff3ct)&quot;, marker=:circle)
+scatterlines!(ax, ebn0s, ber_values; label=&quot;Aff3ct.jl&quot;, marker=:rect)
+axislegend(ax)
+fig</code></pre><img src="89a622a7.png" alt="Example block output"/><h3 id="Polar-SCL-(N2048,-K1723,-L32)"><a class="docs-heading-anchor" href="#Polar-SCL-(N2048,-K1723,-L32)">Polar SCL (N=2048, K=1723, L=32)</a><a id="Polar-SCL-(N2048,-K1723,-L32)-1"></a><a class="docs-heading-anchor-permalink" href="#Polar-SCL-(N2048,-K1723,-L32)" title="Permalink"></a></h3><p>Reference: <code>aff3ct/refs/POLAR/AWGN/BPSK/SCL/Polar_N2048_K1723_SCL_L32_NO_SPC_p32.txt</code></p><p>Configuration: systematic polar encoder, GA frozen bits (adaptive sigma), Successive Cancellation List (SCL) decoder with list size 32, BPSK-AWGN.</p><table><tr><th style="text-align: right">Eb/N0 (dB)</th><th style="text-align: right">Reference BER</th><th style="text-align: right">Reference frames</th></tr><tr><td style="text-align: right">2.75</td><td style="text-align: right">1.10e-2</td><td style="text-align: right">250</td></tr><tr><td style="text-align: right">3.00</td><td style="text-align: right">2.74e-3</td><td style="text-align: right">534</td></tr><tr><td style="text-align: right">3.50</td><td style="text-align: right">1.45e-4</td><td style="text-align: right">4 280</td></tr></table><pre><code class="language-julia hljs">using Aff3ct, Random
+
+ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
+
+function run_polar_scl(K, N, L, ebn0_db, n_frames; seed=42)
+    R = K / N
+    sigma = ebn0_to_sigma(ebn0_db, R)
+    fb = generate_frozen_bits_ga(K, N; design_snr=ebn0_db)
+    enc = PolarEncoder(K, N, fb)
+    dec = PolarSCLDecoder(K, N, L, fb)
+    rng = Random.default_rng(); Random.seed!(rng, seed)
+    total_be = 0
+    for _ in 1:n_frames
+        U_K = Int32.(rand(rng, Bool, K))
+        X_N = encode(enc, U_K)
+        bpsk = Float32[1f0 - 2f0 * x for x in X_N]
+        Y_N = Float32[b + sigma * randn(rng, Float32) for b in bpsk]
+        llrs = Float32[2f0 * y / sigma^2 for y in Y_N]
+        V_K = decode(dec, llrs)
+        total_be += count(U_K .!= V_K)
+    end
+    return total_be / (n_frames * K)
+end
+
+ebn0s = [2.75, 3.0, 3.5]
+ref_bers = [1.10e-2, 2.74e-3, 1.45e-4]
+n_frames = [250, 534, 4280]
+
+ber_values = Float64[]
+println(&quot;Polar SCL (N=2048, K=1723, L=32) verification:&quot;)
+for (ebn0, ref_ber, nf) in zip(ebn0s, ref_bers, n_frames)
+    ber = run_polar_scl(1723, 2048, 32, ebn0, nf)
+    push!(ber_values, ber)
+    ratio = ber &gt; 0 ? ref_ber / ber : Inf
+    println(&quot;  Eb/N0=$(ebn0)dB: BER=$(round(ber, sigdigits=3))  ref=$(ref_ber)  ratio=$(round(ratio, digits=2))x&quot;)
+end
+
+using CairoMakie
+
+fig = Figure()
+ax = Axis(fig[1, 1];
+    xlabel=&quot;Eb/N0 (dB)&quot;, ylabel=&quot;BER&quot;,
+    yscale=log10, title=&quot;Polar SCL (N=2048, K=1723, L=32)&quot;)
+scatterlines!(ax, ebn0s, ref_bers; label=&quot;Reference (aff3ct)&quot;, marker=:circle)
+scatterlines!(ax, ebn0s, ber_values; label=&quot;Aff3ct.jl&quot;, marker=:rect)
+axislegend(ax)
+fig</code></pre><img src="4307d16a.png" alt="Example block output"/></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Home</a><a class="docs-footer-nextpage" href="../turbo/">Turbo Codes »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.17.0 on <span class="colophon-date" title="Friday 22 May 2026 20:53">Friday 22 May 2026</span>. Using Julia version 1.10.11.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
