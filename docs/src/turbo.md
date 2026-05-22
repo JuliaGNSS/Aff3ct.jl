@@ -26,7 +26,7 @@ LTE_VEC scaling factor (0.75x extrinsic information), 6 turbo iterations, BPSK-A
 | 0.50        | 1.31e-3       | 2 508            |
 
 ```@example turbo
-using AFF3CT, Random
+using Aff3ct, Random
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 

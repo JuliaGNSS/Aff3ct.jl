@@ -18,7 +18,7 @@ Configuration: Rate-1/2 RSC code with generator polynomials {05, 07} in octal
 termination (buffered), BPSK-AWGN.
 
 ```@example rsc
-using AFF3CT, Random
+using Aff3ct, Random
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 

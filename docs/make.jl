@@ -1,8 +1,8 @@
 using Documenter
-using AFF3CT
+using Aff3ct
 
 makedocs(;
-    modules=[AFF3CT],
+    modules=[Aff3ct],
     sitename="AFF3CT.jl",
     authors="Soeren Schoenbrod and contributors",
     pages=[

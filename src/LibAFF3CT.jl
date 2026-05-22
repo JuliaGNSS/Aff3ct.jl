@@ -2,7 +2,7 @@
     LibAFF3CT
 
 Raw `ccall` wrappers around the `libaff3ct_jl` C API.
-These are thin, unsafe wrappers — prefer the high-level API in `AFF3CT`.
+These are thin, unsafe wrappers — prefer the high-level API in `Aff3ct`.
 """
 module LibAFF3CT
 

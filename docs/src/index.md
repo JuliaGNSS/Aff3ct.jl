@@ -13,7 +13,7 @@ Julia bindings for the [AFF3CT](https://aff3ct.github.io/) Forward Error Correct
 ## Quick Example
 
 ```julia
-using AFF3CT
+using Aff3ct
 
 # Polar encode/decode
 K, N = 128, 256
@@ -40,5 +40,5 @@ upstream aff3ct reference curves from `aff3ct/refs/`.
 ## Internal Modules
 
 ```@docs
-AFF3CT.LibAFF3CT
+Aff3ct.LibAFF3CT
 ```

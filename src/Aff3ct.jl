@@ -1,4 +1,4 @@
-module AFF3CT
+module Aff3ct
 
 include("LibAFF3CT.jl")
 using .LibAFF3CT
@@ -32,4 +32,4 @@ export ConvEncoder, ConvViterbiDecoder
 # Common
 export encode, decode, encode!, decode!
 
-end # module AFF3CT
+end # module Aff3ct

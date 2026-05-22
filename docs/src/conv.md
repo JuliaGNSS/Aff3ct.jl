@@ -27,7 +27,7 @@ Configuration: rate-1/2 feedforward conv code with generator polynomials
 (SIHO) decoder with trellis termination, BPSK-AWGN.
 
 ```@example conv
-using AFF3CT, Random
+using Aff3ct, Random
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 

@@ -1,4 +1,4 @@
-using AFF3CT
+using Aff3ct
 using Test
 using Random
 

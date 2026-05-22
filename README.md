@@ -10,7 +10,7 @@ Julia bindings for [AFF3CT](https://aff3ct.github.io/), a fast forward-error-cor
 
 ```julia
 using Pkg
-Pkg.add("AFF3CT")
+Pkg.add("Aff3ct")
 ```
 
 Binaries are provided via `aff3ct_jll` — no separate C/C++ build is required.
@@ -18,7 +18,7 @@ Binaries are provided via `aff3ct_jll` — no separate C/C++ build is required.
 ## Quick example
 
 ```julia
-using AFF3CT
+using Aff3ct
 
 # Polar (N=128, K=96) with Gaussian-Approximation frozen bits
 fb  = generate_frozen_bits_ga(96, 128; design_snr=2.0)

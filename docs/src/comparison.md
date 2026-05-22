@@ -80,7 +80,7 @@ it variable and often lower latency than the worst case. This parallelism is why
 chosen for high-throughput standards like 5G NR data channels and 10 Gbps Ethernet.
 
 ```@example comparison
-using AFF3CT, Random, CairoMakie
+using Aff3ct, Random, CairoMakie
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 

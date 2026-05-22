@@ -27,7 +27,7 @@ Binary Phase-Shift Keying (BPSK) modulation over Additive White Gaussian Noise (
 | 3.40        | 1.75e-3       | 1 798            |
 
 ```@example ldpc
-using AFF3CT, Random, Downloads
+using Aff3ct, Random, Downloads
 
 matrix_url = "https://raw.githubusercontent.com/aff3ct/configuration_files/master/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist"
 matrix_file = get(ENV, "AFF3CT_LDPC_MATRIX") do

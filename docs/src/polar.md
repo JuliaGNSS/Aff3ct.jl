@@ -28,7 +28,7 @@ Configuration: systematic polar encoder, Gaussian Approximation (GA) frozen bits
 | 4.0         | 1.19e-3       | 26 464           |
 
 ```@example polar_sc
-using AFF3CT, Random
+using Aff3ct, Random
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 
@@ -90,7 +90,7 @@ Configuration: systematic polar encoder, GA frozen bits (adaptive sigma), Succes
 | 3.50        | 1.45e-4       | 4 280            |
 
 ```@example polar_scl
-using AFF3CT, Random
+using Aff3ct, Random
 
 ebn0_to_sigma(ebn0_db, R) = Float32(1.0 / sqrt(2 * R * 10^(ebn0_db / 10)))
 

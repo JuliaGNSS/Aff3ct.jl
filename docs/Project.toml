@@ -1,5 +1,5 @@
 [deps]
-AFF3CT = "529ff742-b572-47ff-bc84-d3f557f53d2b"
+Aff3ct = "529ff742-b572-47ff-bc84-d3f557f53d2b"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 aff3ct_jll = "85a5c246-4cb7-59af-af7a-717aeae34f9c"
